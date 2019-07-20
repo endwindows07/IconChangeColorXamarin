@@ -1,0 +1,42 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ContentPage x:Class="TestIconColorXamarin.MainPage"
+             xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:control="clr-namespace:TestIconColorXamarin"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d">
+    <StackLayout>
+        <control:IconViewControl x:Name="IconView"
+                                 WidthRequest="100"
+                                 HeightRequest="100"
+                                 Foreground="#02FCF4"
+                                 Source="icons8_1.png"
+                                 HorizontalOptions="Center"
+                                 VerticalOptions="Center">
+            <control:IconViewControl.GestureRecognizers>
+                <TapGestureRecognizer Tapped="OnTapGestureRecognizerTapped"
+                                      NumberOfTapsRequired="1" />
+            </control:IconViewControl.GestureRecognizers>
+        </control:IconViewControl>
+        <control:IconViewControl WidthRequest="100"
+                                 HeightRequest="100"
+                                 Foreground="Red"
+                                 Source="icons8_2.png"
+                                 HorizontalOptions="Center"
+                                 VerticalOptions="Center" 
+                                 Toggled="Handle_Toggled"/>
+        <control:IconViewControl WidthRequest="100"
+                                 HeightRequest="100"
+                                 ColorActive="Red"
+                                 ColorUnActive="Gray"
+                                 Source="color_1.png"
+                                 HorizontalOptions="Center"
+                                 VerticalOptions="Center" />
+        
+        <!--  Place new controls here  -->
+        <Label Text="Welcome to Xamarin.Forms!"
+               HorizontalOptions="Center"
+               VerticalOptions="CenterAndExpand" />
+    </StackLayout>
+</ContentPage>
